@@ -1,5 +1,7 @@
 package com.compilercastle.core
 
+import kotlinx.serialization.Serializable
+
 /**
  * Represents a node in the hierarchical error tree.
  *
@@ -11,6 +13,7 @@ package com.compilercastle.core
  * @property examples List of code examples triggering this error.
  * @property solutions List of community-contributed solutions.
  */
+@Serializable
 data class ErrorNode(
         val id: String,
         val title: String,
@@ -22,4 +25,4 @@ data class ErrorNode(
 )
 
 /** Represents a code example that triggers a specific error. */
-data class ErrorExample(val code: String, val explanation: String)
+@Serializable data class ErrorExample(val code: String, val explanation: String)
