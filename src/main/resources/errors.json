@@ -1,0 +1,46 @@
+[
+    {
+        "id": "ROOT",
+        "title": "Compilation Error",
+        "description": "The base category for all compilation errors.",
+        "childrenIds": [
+            "SYNTAX",
+            "TYPE"
+        ]
+    },
+    {
+        "id": "SYNTAX",
+        "title": "Syntax Error",
+        "description": "Errors related to the structure of the code.",
+        "parentId": "ROOT",
+        "childrenIds": [
+            "MISSING_SEMICOLON",
+            "UNBALANCED_PARENTHESES"
+        ]
+    },
+    {
+        "id": "TYPE",
+        "title": "Type Error",
+        "description": "Errors related to type safety and compatibility.",
+        "parentId": "ROOT",
+        "childrenIds": [
+            "TYPE_MISMATCH"
+        ]
+    },
+    {
+        "id": "TYPE_MISMATCH",
+        "title": "Type Mismatch",
+        "description": "The type of the expression does not match the expected type.",
+        "parentId": "TYPE",
+        "examples": [
+            {
+                "code": "val x: Int = \"Hello\"",
+                "explanation": "Trying to assign a String to an Int variable."
+            }
+        ],
+        "solutions": [
+            "Ensure the variable type matches the assigned value.",
+            "Use type conversion functions like .toInt() if applicable."
+        ]
+    }
+]
