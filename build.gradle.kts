@@ -1,5 +1,6 @@
 plugins {
     kotlin("jvm") version "1.9.22"
+    kotlin("plugin.serialization") version "1.9.22"
     application
 }
 
@@ -12,8 +13,8 @@ repositories {
 
 dependencies {
     testImplementation(kotlin("test"))
-    // Placeholder for AST library
-    // implementation("com.github.kastree:kastree-ast-psi:0.4.0") 
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.2")
+    implementation("org.jetbrains.kotlin:kotlin-compiler-embeddable:1.9.22")
 }
 
 tasks.test {
